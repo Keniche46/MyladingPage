@@ -1,0 +1,486 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: "Monaspace Krypton-Bold";
+    src: url(../fonts/MonaspaceKrypton-Bold.woff2) format('woff2'),
+         url(../fonts/MonaspaceKrypton-Bold.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url(../fonts/MonaspaceKrypton-Regular.woff2) format('woff2'),
+         url(../fonts/MonaspaceKrypton-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url(../fonts/MonaspaceNeon-Regular.woff2) format('woff2'),
+         url(../fonts/MonaspaceNeon-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monaspace Neon-Light";
+    src: url(../fonts/MonaspaceNeon-Light.woff2) format('woff2'),
+         url(../fonts/MonaspaceNeon-Light.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* End Fontes */
+
+/* Navbar */
+
+header {
+    background-color: #0d0d0d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav img {
+    height: 35px;
+    width: auto;
+}
+
+nav .logo {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    gap: 8px;
+}
+
+nav .botoes a {
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+nav .botoes {
+    font-family: "Monaspace Krypton", monospace;
+    display: flex;
+    gap: 10px;
+}
+
+nav .botoes a:hover {
+    background-color: #a1a1a1;
+    transform: scale(1.05);
+}
+
+/* End Navbar */
+
+/* Partículas desfocadas e seções */
+
+.particles-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: blur(2px) opacity(0.5);
+    pointer-events: none;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Partículas desfocadas e seções */
+
+/* Home */
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow: hidden;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.conteudo-home {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.conteudo-home .foto img {
+    max-height: 40vh;
+    width: auto;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.conteudo-home h1 {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: clamp(40px, 5vw, 75px);
+    margin: 0;
+}
+
+.conteudo-home p {
+    font-family: "Monaspace Neon", monospace;
+    font-size: clamp(14px, 1.5vw, 20px);
+    margin-top: 0;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.conteudo-home .introducao img {
+    max-height: 50px;
+    width: auto;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.conteudo-home .introducao img:hover {
+    transform: scale(1.05);
+}
+
+.botao a {
+    font-family: "Monaspace Krypton", monospace;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    animation: float 2s ease-in-out infinite;
+}
+
+.botao a::after {
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #fff; /* a cor da seta */
+    vertical-align: middle;
+}
+
+.botao a:hover {
+    background-color: #a1a1a1;
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* End Home */
+
+/* Sobre mim */
+
+.sobremim {
+    display: flex;
+    color: #bbbbbb;
+    height: 120dvh;
+    background-color: #444;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10%;
+}
+
+.conteudo-sobremim h2 {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: clamp(24px, 2.6vw, 50px);
+}
+
+.conteudo-sobremim p {
+    font-family: "Monaspace Neon", monospace;
+    font-size: clamp(16px, 1.3vw, 25px);
+}
+
+/* End Sobre mim */
+
+/* Trabalhos */
+
+.trabalhos {
+    height: 120dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #0d0d0d;
+    padding: 0 10px;
+    gap: 2%;
+}
+
+.titulo-trabalho h2 {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: clamp(24px, 2.6vw, 50px);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.titulo-trabalho h2::after {
+    content: "";
+    display: block;
+    margin: 5px auto 0; /* espaço acima e centraliza horizontalmente */
+    width: 150px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.conteudo-trabalhos {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 0 10%;
+}
+
+.trabalho-caixa {
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 75px;
+    width: 15vw;
+    height: auto;
+    transition: 0.3s;
+}
+
+.trabalho-caixa img {
+    width: 100%;
+    height: auto;
+    border-radius: 75px 75px 0 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.trabalho-caixa h4 {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: clamp(14px, 0.833333vw, 16px);
+    padding: 0 15px;
+}
+
+.trabalho-caixa p {
+    font-family: "Monaspace Neon", monospace;
+    font-size: clamp(12px, 0.729167vw, 14px);
+    padding: 0 15px;
+}
+
+.trabalho-caixa:hover {
+    transform: scale(1.05);
+}
+
+/* End Trabalhos */
+
+/* Experiência */
+
+.experiencia {
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 135dvh;
+    gap: 2%;
+}
+
+.titulo-xp h2 {
+    color: #fff;
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: clamp(24px, 2.6vw, 50px);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.titulo-xp h2::after {
+    content: "";
+    display: block;
+    margin: 5px auto 0;
+    width: 150px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.caixa-experiencia { 
+    display: flex; 
+    align-items: center; 
+    height: 27.777778vh;
+    justify-content: flex-start; 
+    background-color: #999999; 
+    width: 70%; 
+    border-radius: 60px; 
+    margin: 50px auto; 
+    gap: 15px; 
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.5); 
+    box-sizing: border-box; transition: 0.3s; 
+}
+
+.caixa-experiencia img { 
+    height: 100%;
+    width: auto; 
+    border-radius: 60px 0 0 60px; 
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.5); 
+    object-fit: cover;
+}
+
+.caixa-experiencia h4 {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    margin-bottom: 0;
+}
+
+.desc-xp {
+    padding: 10px;
+}
+
+.caixa-experiencia #data {
+    font-family: "Monaspace Neon-Light", monospace;
+}
+
+.caixa-experiencia #text-xp {
+    font-family: "Monaspace Neon", monospace;
+}
+
+.caixa-experiencia:hover {
+    transform: scale(1.05);
+}
+
+/* Contato */
+.contato {
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 200px 80px;
+    text-align: center;
+}
+
+.conteudo-contato .titulo {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.conteudo-contato .descricao {
+    font-family: "Monaspace Neon", monospace;
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #bbbbbb;
+}
+
+/* Formulário */
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-contato .campo input,
+.form-contato .campo textarea,
+.form-contato button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: "Monaspace Neon", monospace;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Foco nos inputs */
+.form-contato .campo input:focus,
+.form-contato .campo textarea:focus {
+    border-color: #a1a1a1;
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Botão */
+.form-contato button {
+    font-family: "Monaspace Krypton-Bold", monospace;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.form-contato button:hover {
+    background-color: #a1a1a1;
+    color: #0d0d0d;
+    transform: scale(1.03);
+}
+
+/* Redes */
+.redes-contato {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.redes-contato img {
+    height: 45px;
+    width: 45px;
+    object-fit: contain;
+    transition: 0.3s;
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3));
+}
+
+.redes-contato img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.6));
+}
+
+/* End Contato */
