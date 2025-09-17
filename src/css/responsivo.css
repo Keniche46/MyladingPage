@@ -10,19 +10,88 @@
     .caixa-experiencia {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         text-align: center;
-        width: 20vw;
+        width: 23vw;
         height: auto;
+        box-sizing: border-box;
     }
 
     .caixa-experiencia img {
         border-radius: 60px 60px 0 0;
         width: 100%;
         height: auto;
-        
     }
     
-    
+    #desc-xp {
+        padding: 0 10%;
+    }
 
+}
+
+@media (max-width: 480px) {
+    
+    /* Home */
+    
+    nav {
+        display: none;
+    }
+
+    .home {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .home .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* End Home */
+
+    /* Sobre mim */
+
+    .sobremim {
+        height: 100dvh;
+    }
+
+    /* End Sobre mim */
+
+    /* Trabalhos */
+
+    .trabalhos {
+        height: auto;
+        padding: 10% 0;
+    }
+
+    .conteudo-trabalhos {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .trabalho-caixa {
+        width: 50dvw;
+        height: 65dvh;
+    }
+
+    /* End Trabalhos */
+
+    .experiencia {
+        height: auto;
+        padding: 10% 0;
+    }
+
+    .conteudo-experiencia {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .caixa-experiencia {
+        width: 50dvw;
+        margin: 0;
+
+    }
 }
